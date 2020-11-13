@@ -52,10 +52,16 @@ public class NotificationActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onDestroy() {
-        unregisterReceiver(receiver);
-        super.onDestroy();
+
+    private void sendNotification() {
+        Intent updateIntent =  new Intent(ACTION_UPDATE_NOTIFICATION);
+        PendingIntent updatePendingIntent = PendingIntent.getBroadcast(this, NOTIFICATION_ID, updateIntent, PendingIntent.FLAG_ONE_SHOT);
+
+        Notification notification = getNotificationBuilder()
+                .addAction(R.drawable.ic_update, "Update Notification", updatePendingIntent)
+                .build();
+
+        NotificationManagerCompat.from(this).notify(NOTIFICATION_ID, notification);
     }
 
     private void updateNotification() {
@@ -73,15 +79,11 @@ public class NotificationActivity extends AppCompatActivity {
         notifyManager.cancel(NOTIFICATION_ID);
     }
 
-    private void sendNotification() {
-        Intent updateIntent =  new Intent(ACTION_UPDATE_NOTIFICATION);
-        PendingIntent updatePendingIntent = PendingIntent.getBroadcast(this, NOTIFICATION_ID, updateIntent, PendingIntent.FLAG_ONE_SHOT);
 
-        Notification notification = getNotificationBuilder()
-                .addAction(R.drawable.ic_update, "Update Notification", updatePendingIntent)
-                .build();
-
-        NotificationManagerCompat.from(this).notify(NOTIFICATION_ID, notification);
+    @Override
+    protected void onDestroy() {
+        unregisterReceiver(receiver);
+        super.onDestroy();
     }
 
 

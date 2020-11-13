@@ -21,6 +21,9 @@
         <activity android:name=".Localization.LocaleActivity" />
         <activity android:name=".Snackbar.SnackbarActivity" />
         <activity android:name=".Toast.ToastActivity" />
+
+        <service android:name=".JobScheduler.Service.NotificationJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
     </application>
 
 </manifest>
