@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.okwy.practiceproject.IntentsWithActivities.IntentActivity;
 import com.okwy.practiceproject.JobScheduler.JobSchedulerActivity;
 import com.okwy.practiceproject.Localization.LocaleActivity;
 import com.okwy.practiceproject.Main.Adapter.MainAdapter;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
         conceptList.add("Notification");
         conceptList.add("Localization");
         conceptList.add("JobScheduler");
+        conceptList.add("Intents and Activities");
 
         System.out.println(conceptList.toString());
         MainAdapter mainAdapter = new MainAdapter(this, conceptList, MainActivity.this);
@@ -64,6 +66,9 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
                 break;
             case "JobScheduler":
                 startActivity(new Intent(this, JobSchedulerActivity.class));
+                break;
+            case "Intents and Activities":
+                startActivity(new Intent(this, IntentActivity.class));
                 break;
         }
     }
