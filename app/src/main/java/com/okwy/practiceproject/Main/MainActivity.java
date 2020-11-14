@@ -15,6 +15,7 @@ import com.okwy.practiceproject.Main.Adapter.MainAdapter;
 import com.okwy.practiceproject.Notification.NotificationActivity;
 import com.okwy.practiceproject.R;
 import com.okwy.practiceproject.Snackbar.SnackbarActivity;
+import com.okwy.practiceproject.TabNavigation.TabNavigationActivity;
 import com.okwy.practiceproject.Toast.ToastActivity;
 
 import java.util.ArrayList;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
         conceptList.add("Notification");
         conceptList.add("Localization");
         conceptList.add("JobScheduler");
+        conceptList.add("Tab Navigation");
         conceptList.add("Intents and Activities");
         conceptList.add("Drawables, Styles and Themes");
 
@@ -68,6 +70,9 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
                 break;
             case "JobScheduler":
                 startActivity(new Intent(this, JobSchedulerActivity.class));
+                break;
+            case "Tab Navigation":
+                startActivity(new Intent(this, TabNavigationActivity.class));
                 break;
             case "Intents and Activities":
                 startActivity(new Intent(this, IntentActivity.class));
