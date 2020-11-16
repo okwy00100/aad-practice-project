@@ -13,6 +13,7 @@ import com.okwy.practiceproject.IntentsWithActivities.IntentActivity;
 import com.okwy.practiceproject.JobScheduler.JobSchedulerActivity;
 import com.okwy.practiceproject.Localization.LocaleActivity;
 import com.okwy.practiceproject.Main.Adapter.MainAdapter;
+import com.okwy.practiceproject.MenusWithPickers.MenusWithPickersActivity;
 import com.okwy.practiceproject.Notification.NotificationActivity;
 import com.okwy.practiceproject.R;
 import com.okwy.practiceproject.Snackbar.SnackbarActivity;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
         conceptList.add("JobScheduler");
         conceptList.add("App Settings");
         conceptList.add("Tab Navigation");
+        conceptList.add("Menus And Pickers");
         conceptList.add("Intents and Activities");
         conceptList.add("Drawables, Styles and Themes");
 
@@ -78,6 +80,9 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
                 break;
             case "Tab Navigation":
                 startActivity(new Intent(this, TabNavigationActivity.class));
+                break;
+            case "Menus And Pickers":
+                startActivity(new Intent(this, MenusWithPickersActivity.class));
                 break;
             case "Intents and Activities":
                 startActivity(new Intent(this, IntentActivity.class));
