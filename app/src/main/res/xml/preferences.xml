@@ -2,8 +2,26 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <SwitchPreferenceCompat
-        android:defaultValue="true"
+        android:defaultValue="false"
         android:key="example_switch"
         android:summary="Turn this option on or off"
         android:title="Settings Option" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="check_box_preference"
+        android:summary="Another test on App preferences"
+        android:title="Check box preference" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="visibility_check_box"
+        android:summaryOff="Hidden"
+        android:summaryOn="Shown"
+        android:title="Visibility" />
+    <ListPreference
+        android:defaultValue="Default"
+        android:entries="@array/list_array_key"
+        android:entryValues="@array/list_array_value"
+        android:key="list_preference"
+        android:title="Background"
+        android:summary="Choose your background tint"/>
 </PreferenceScreen>
