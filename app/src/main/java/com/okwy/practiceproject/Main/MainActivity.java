@@ -7,14 +7,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.okwy.practiceproject.AppSettings.AppSettingsActivity;
 import com.okwy.practiceproject.DrawablesStylesThemes.ScoreKeeperActivity;
 import com.okwy.practiceproject.IntentsWithActivities.IntentActivity;
 import com.okwy.practiceproject.JobScheduler.JobSchedulerActivity;
 import com.okwy.practiceproject.Localization.LocaleActivity;
 import com.okwy.practiceproject.Main.Adapter.MainAdapter;
+import com.okwy.practiceproject.MenusWithPickers.MenusWithPickersActivity;
 import com.okwy.practiceproject.Notification.NotificationActivity;
 import com.okwy.practiceproject.R;
 import com.okwy.practiceproject.Snackbar.SnackbarActivity;
+import com.okwy.practiceproject.TabNavigation.TabNavigationActivity;
 import com.okwy.practiceproject.Toast.ToastActivity;
 
 import java.util.ArrayList;
@@ -41,6 +44,9 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
         conceptList.add("Notification");
         conceptList.add("Localization");
         conceptList.add("JobScheduler");
+        conceptList.add("App Settings");
+        conceptList.add("Tab Navigation");
+        conceptList.add("Menus And Pickers");
         conceptList.add("Intents and Activities");
         conceptList.add("Drawables, Styles and Themes");
 
@@ -68,6 +74,15 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
                 break;
             case "JobScheduler":
                 startActivity(new Intent(this, JobSchedulerActivity.class));
+                break;
+            case "App Settings":
+                startActivity(new Intent(this, AppSettingsActivity.class));
+                break;
+            case "Tab Navigation":
+                startActivity(new Intent(this, TabNavigationActivity.class));
+                break;
+            case "Menus And Pickers":
+                startActivity(new Intent(this, MenusWithPickersActivity.class));
                 break;
             case "Intents and Activities":
                 startActivity(new Intent(this, IntentActivity.class));
