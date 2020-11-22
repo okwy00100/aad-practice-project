@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.okwy.practiceproject.AppSettings.AppSettingsActivity;
+import com.okwy.practiceproject.BroadcastReceiver.BroadcastReceiverActivity;
 import com.okwy.practiceproject.CoordinatorLayout.CoordinatorLayoutActivity;
 import com.okwy.practiceproject.DrawablesStylesThemes.ScoreKeeperActivity;
 import com.okwy.practiceproject.IntentsWithActivities.IntentActivity;
@@ -17,6 +18,7 @@ import com.okwy.practiceproject.Main.Adapter.MainAdapter;
 import com.okwy.practiceproject.MenusWithPickers.MenusWithPickersActivity;
 import com.okwy.practiceproject.Notification.NotificationActivity;
 import com.okwy.practiceproject.R;
+import com.okwy.practiceproject.Services.ServiceActivity;
 import com.okwy.practiceproject.Snackbar.SnackbarActivity;
 import com.okwy.practiceproject.TabNavigation.TabNavigationActivity;
 import com.okwy.practiceproject.Toast.ToastActivity;
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
         conceptList.add("Tab Navigation");
         conceptList.add("Menus And Pickers");
         conceptList.add("Coordinator Layout");
+        conceptList.add("Foreground Service");
+        conceptList.add("Broadcast Receivers");
         conceptList.add("Intents and Activities");
         conceptList.add("Drawables, Styles and Themes");
         conceptList.add("App Settings and Preferences");
@@ -90,6 +94,12 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
                 break;
             case "Menus And Pickers":
                 startActivity(new Intent(this, MenusWithPickersActivity.class));
+                break;
+            case "Foreground Service":
+                startActivity(new Intent(this, ServiceActivity.class));
+                break;
+            case "Broadcast Receivers":
+                startActivity(new Intent(this, BroadcastReceiverActivity.class));
                 break;
             case "Coordinator Layout":
                 startActivity(new Intent(this, CoordinatorLayoutActivity.class));
