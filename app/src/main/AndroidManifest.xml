@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.okwy.practiceproject">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,13 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BroadcastReceiver.BroadcastReceiverActivity"></activity>
-
-        <service
-            android:name=".Services.MediaService"
-            android:enabled="true"
-            android:exported="false" />
-
+        <activity android:name=".AndroidArchitecture.Views.NoteActivity"/>
+        <activity android:name=".VolleyPicasso.VolleyActivity" />
+        <activity android:name=".BroadcastReceiver.BroadcastReceiverActivity" />
         <activity android:name=".Services.ServiceActivity" />
         <activity android:name=".CoordinatorLayout.CoordinatorLayoutActivity" />
         <activity android:name=".WorkManager.WorkManagerActivity" />
@@ -55,6 +54,7 @@
             </intent-filter>
         </activity>
 
+        <service android:name=".Services.MediaService" />
         <service
             android:name=".JobScheduler.Service.NotificationJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />

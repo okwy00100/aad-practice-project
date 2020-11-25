@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.okwy.practiceproject.AndroidArchitecture.Views.NoteActivity;
 import com.okwy.practiceproject.AppSettings.AppSettingsActivity;
 import com.okwy.practiceproject.BroadcastReceiver.BroadcastReceiverActivity;
 import com.okwy.practiceproject.CoordinatorLayout.CoordinatorLayoutActivity;
@@ -22,6 +23,7 @@ import com.okwy.practiceproject.Services.ServiceActivity;
 import com.okwy.practiceproject.Snackbar.SnackbarActivity;
 import com.okwy.practiceproject.TabNavigation.TabNavigationActivity;
 import com.okwy.practiceproject.Toast.ToastActivity;
+import com.okwy.practiceproject.VolleyPicasso.VolleyActivity;
 import com.okwy.practiceproject.WorkManager.WorkManagerActivity;
 
 import java.util.ArrayList;
@@ -51,9 +53,11 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
         conceptList.add("JobScheduler");
         conceptList.add("Tab Navigation");
         conceptList.add("Menus And Pickers");
+        conceptList.add("Volley With Picasso");
         conceptList.add("Coordinator Layout");
         conceptList.add("Foreground Service");
         conceptList.add("Broadcast Receivers");
+        conceptList.add("Android Architecture");
         conceptList.add("Intents and Activities");
         conceptList.add("Drawables, Styles and Themes");
         conceptList.add("App Settings and Preferences");
@@ -95,11 +99,17 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
             case "Menus And Pickers":
                 startActivity(new Intent(this, MenusWithPickersActivity.class));
                 break;
+            case "Volley With Picasso":
+                startActivity(new Intent(this, VolleyActivity.class));
+                break;
             case "Foreground Service":
                 startActivity(new Intent(this, ServiceActivity.class));
                 break;
             case "Broadcast Receivers":
                 startActivity(new Intent(this, BroadcastReceiverActivity.class));
+                break;
+            case "Android Architecture":
+                startActivity(new Intent(this, NoteActivity.class));
                 break;
             case "Coordinator Layout":
                 startActivity(new Intent(this, CoordinatorLayoutActivity.class));

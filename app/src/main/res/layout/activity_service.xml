@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/button6"
-        android:onClick="startMediaService"
+        android:onClick="stopMediaService"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -21,7 +21,7 @@
 
     <Button
         android:id="@+id/button5"
-        android:onClick="stopMediaService"
+        android:onClick="startMediaService"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
