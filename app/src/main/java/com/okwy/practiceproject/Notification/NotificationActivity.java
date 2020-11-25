@@ -52,9 +52,8 @@ public class NotificationActivity extends AppCompatActivity {
     }
 
 
-
     private void sendNotification() {
-        Intent updateIntent =  new Intent(ACTION_UPDATE_NOTIFICATION);
+        Intent updateIntent = new Intent(ACTION_UPDATE_NOTIFICATION);
         PendingIntent updatePendingIntent = PendingIntent.getBroadcast(this, NOTIFICATION_ID, updateIntent, PendingIntent.FLAG_ONE_SHOT);
 
         Notification notification = getNotificationBuilder()
@@ -67,11 +66,11 @@ public class NotificationActivity extends AppCompatActivity {
     private void updateNotification() {
         Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.mascot);
         NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
-        notifyBuilder.setStyle(new NotificationCompat.BigPictureStyle()
+        Notification notification = notifyBuilder.setStyle(new NotificationCompat.BigPictureStyle()
                 .bigPicture(image)
-                .setBigContentTitle("Notification Updated!!!"));
+                .setBigContentTitle("Notification Updated!!!"))
 
-        Notification notification = notifyBuilder.build();
+                .build();
         NotificationManagerCompat.from(this).notify(NOTIFICATION_ID, notification);
     }
 
@@ -107,6 +106,7 @@ public class NotificationActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             //create a notification channel
             NotificationChannel notificationChannel = new NotificationChannel(PRIMARY_CHANNEL_ID, "My Notification", NotificationManager.IMPORTANCE_HIGH);
+
             notificationChannel.enableLights(true);
             notificationChannel.setLightColor(Color.BLUE);
             notificationChannel.enableVibration(true);

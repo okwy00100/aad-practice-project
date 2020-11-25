@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.okwy.practiceproject">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CoordinatorLayout.CoordinatorLayoutActivity"></activity>
+        <activity android:name=".AndroidArchitecture.Views.NoteActivity"/>
+        <activity android:name=".VolleyPicasso.VolleyActivity" />
+        <activity android:name=".BroadcastReceiver.BroadcastReceiverActivity" />
+        <activity android:name=".Services.ServiceActivity" />
+        <activity android:name=".CoordinatorLayout.CoordinatorLayoutActivity" />
         <activity android:name=".WorkManager.WorkManagerActivity" />
         <activity android:name=".MenusWithPickers.MenusWithPickersActivity" />
         <activity
@@ -33,7 +40,9 @@
         </activity>
         <activity android:name=".IntentsWithActivities.IntentActivity" />
         <activity android:name=".JobScheduler.JobSchedulerActivity" />
-        <activity android:name=".Notification.NotificationActivity" />
+        <activity
+            android:name=".Notification.NotificationActivity"
+            android:launchMode="singleTop" />
         <activity android:name=".Localization.LocaleActivity" />
         <activity android:name=".Snackbar.SnackbarActivity" />
         <activity android:name=".Toast.ToastActivity" />
@@ -45,6 +54,7 @@
             </intent-filter>
         </activity>
 
+        <service android:name=".Services.MediaService" />
         <service
             android:name=".JobScheduler.Service.NotificationJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
