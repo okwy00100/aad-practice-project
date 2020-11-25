@@ -14,6 +14,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.okwy.practiceproject.R;
@@ -55,12 +56,12 @@ public class VolleyActivity extends AppCompatActivity {
 
     private void parseJSONfromServer() {
 
-        StringRequest request = new StringRequest(Request.Method.GET, URL, new Response.Listener<String>() {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, URL, null,  new Response.Listener<JSONObject>() {
             @Override
-            public void onResponse(String response) {
+            public void onResponse(JSONObject response) {
                 try {
 //                    JSONArray jsonArray = new JSONObject(response).getJSONArray("hits");
-                    JSONArray jsonArray = new JSONArray(response);
+                    JSONArray jsonArray = response.getJSONArray("hits");
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject hit = jsonArray.getJSONObject(i);
 

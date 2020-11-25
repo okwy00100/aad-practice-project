@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AndroidArchitecture.Views.NoteActivity"/>
+        <activity android:name=".AndroidArchitecture.Views.AddEditNoteActivity"></activity>
+        <activity android:name=".AndroidArchitecture.Views.NoteActivity" />
         <activity android:name=".VolleyPicasso.VolleyActivity" />
         <activity android:name=".BroadcastReceiver.BroadcastReceiverActivity" />
         <activity android:name=".Services.ServiceActivity" />
