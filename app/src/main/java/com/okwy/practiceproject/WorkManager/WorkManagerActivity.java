@@ -37,8 +37,15 @@ public class WorkManagerActivity extends AppCompatActivity {
         WorkManager.getInstance(this).getWorkInfoByIdLiveData(request.getId()).observe(this, new Observer<WorkInfo>() {
             @Override
             public void onChanged(WorkInfo workInfo) {
-                String status = workInfo.getState().name();
-                workStatus.append(status + "\n");
+                if(workInfo != null) {
+                    if(workInfo.getState().isFinished()) {
+                        workStatus.append(workInfo.getOutputData().getString(MyWorker.KEY_OUTPUT_DESC) + "\n");
+                    }
+
+                    String status = workInfo.getState().name();
+                    workStatus.append(status + "\n");
+                }
+
             }
         });
 

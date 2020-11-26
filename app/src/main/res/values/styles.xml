@@ -12,7 +12,7 @@
         <item name="android:background">@drawable/button_background</item>
         <item name="android:tint">@color/colorPrimary</item>
     </style>
-    
+
     <style name="PlusButtons" parent="ScoreButtons">
         <item name="android:src">@drawable/ic_plus</item>
         <item name="android:contentDescription">@string/plus_button</item>
@@ -28,8 +28,12 @@
     </style>
 
     <style name="TeamText">
-        <item name=
-            "android:textAppearance">@style/TextAppearance.AppCompat.Display1
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display1
         </item>
+    </style>
+
+    <style name="Widget.AppTheme.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <item name="exampleColor">@color/light_blue_400</item>
     </style>
 </resources>

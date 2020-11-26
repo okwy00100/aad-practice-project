@@ -11,6 +11,7 @@ import com.okwy.practiceproject.AndroidArchitecture.Views.NoteActivity;
 import com.okwy.practiceproject.AppSettings.AppSettingsActivity;
 import com.okwy.practiceproject.BroadcastReceiver.BroadcastReceiverActivity;
 import com.okwy.practiceproject.CoordinatorLayout.CoordinatorLayoutActivity;
+import com.okwy.practiceproject.CustomViews.CustomViewActivity;
 import com.okwy.practiceproject.DrawablesStylesThemes.ScoreKeeperActivity;
 import com.okwy.practiceproject.IntentsWithActivities.IntentActivity;
 import com.okwy.practiceproject.JobScheduler.JobSchedulerActivity;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
         List<String> conceptList = new ArrayList<>();
         conceptList.add("Toast");
         conceptList.add("Snackbar");
+        conceptList.add("Custom Views");
         conceptList.add("Notification");
         conceptList.add("Localization");
         conceptList.add("WorkManager");
@@ -77,6 +79,9 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
                 break;
             case "Snackbar":
                 startActivity(new Intent(this, SnackbarActivity.class));
+                break;
+            case "Custom Views":
+                startActivity(new Intent(this, CustomViewActivity.class));
                 break;
             case "Notification":
                 startActivity(new Intent(this, NotificationActivity.class));
