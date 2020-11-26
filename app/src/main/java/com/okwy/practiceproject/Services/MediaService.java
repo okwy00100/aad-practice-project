@@ -35,6 +35,7 @@ public class MediaService extends Service {
     private void playMedia() {
         System.out.println(">>>>>>Inside PlayMedia method in Media Service>>>>>>");
         player = MediaPlayer.create(this, R.raw.killlakill);
+        player.setLooping(true);
 
         Intent redirectIntent = new Intent(this, ServiceActivity.class);
         PendingIntent redirectPendingIntent = PendingIntent.getActivity(this, 0, redirectIntent, 0);

@@ -25,17 +25,15 @@ public class MyWorker extends Worker {
     @NonNull
     @Override
     public Result doWork() {
-        Data data = getInputData();
-        String desc = data.getString(WorkManagerActivity.KEY_INPUT_DESC);
 
-        displayNotification(desc);
+        displayNotification(getInputData().getString(WorkManagerActivity.KEY_INPUT_DESC));
 
         Data outData = new Data.Builder()
                 .putString(KEY_OUTPUT_DESC, "Task Complete")
                 .build();
 
-        
-        return Result.success();
+
+        return Result.success(outData);
     }
 
 
