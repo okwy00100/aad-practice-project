@@ -19,6 +19,7 @@ import com.okwy.practiceproject.Localization.LocaleActivity;
 import com.okwy.practiceproject.Main.Adapter.MainAdapter;
 import com.okwy.practiceproject.MenusWithPickers.MenusWithPickersActivity;
 import com.okwy.practiceproject.Notification.NotificationActivity;
+import com.okwy.practiceproject.PagingWithRetrofit.PagingActivity;
 import com.okwy.practiceproject.R;
 import com.okwy.practiceproject.Services.ServiceActivity;
 import com.okwy.practiceproject.Snackbar.SnackbarActivity;
@@ -55,7 +56,8 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
         conceptList.add("JobScheduler");
         conceptList.add("Tab Navigation");
         conceptList.add("Menus And Pickers");
-        conceptList.add("Volley With Picasso");
+        conceptList.add("Paging with Retrofit");
+        conceptList.add("Volley with Picasso");
         conceptList.add("Coordinator Layout");
         conceptList.add("Foreground Service");
         conceptList.add("Broadcast Receivers");
@@ -94,6 +96,9 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
                 break;
             case "JobScheduler":
                 startActivity(new Intent(this, JobSchedulerActivity.class));
+                break;
+            case "Paging with Retrofit":
+                startActivity(new Intent(this, PagingActivity.class));
                 break;
             case "App Settings and Preferences":
                 startActivity(new Intent(this, AppSettingsActivity.class));
