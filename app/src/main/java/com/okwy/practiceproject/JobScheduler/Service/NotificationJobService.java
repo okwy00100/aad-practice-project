@@ -1,5 +1,6 @@
 package com.okwy.practiceproject.JobScheduler.Service;
 
+import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -14,6 +15,7 @@ import androidx.core.app.NotificationCompat;
 import com.okwy.practiceproject.JobScheduler.JobSchedulerActivity;
 import com.okwy.practiceproject.R;
 
+@SuppressLint("SpecifyJobSchedulerIdRange")
 public class NotificationJobService extends JobService {
 
     NotificationManager notifyManager;
