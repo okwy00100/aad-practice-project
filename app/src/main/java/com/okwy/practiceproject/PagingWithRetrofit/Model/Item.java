@@ -1,14 +1,14 @@
 package com.okwy.practiceproject.PagingWithRetrofit.Model;
 
 public class Item {
-    public Owner owner;
-    public boolean is_accepted;
-    public int score;
-    public long last_activity_date;
-    public long last_edit_date;
-    public long creation_date;
-    public long answer_id;
-    public long question_id;
+    private Owner owner;
+    private boolean is_accepted;
+    private int score;
+    private long last_activity_date;
+    private long last_edit_date;
+    private long creation_date;
+    private long answer_id;
+    private long question_id;
 
     public Owner getOwner() {
         return owner;

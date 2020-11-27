@@ -12,16 +12,18 @@ import androidx.paging.PagedListAdapter;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.okwy.practiceproject.PagingWithRetrofit.Model.Item;
 import com.okwy.practiceproject.R;
 
-public class PageAdapter extends PagedListAdapter<Item, PageAdapter.ViewHolder> {
+public class ItemAdapter extends PagedListAdapter<Item, ItemAdapter.ViewHolder> {
 
     private Context context;
 
 
-    protected PageAdapter() {
+    public ItemAdapter(Context context) {
         super(DIFF_CALLBACK);
+        this.context = context;
     }
 
     public static final DiffUtil.ItemCallback<Item> DIFF_CALLBACK = new DiffUtil.ItemCallback<Item>() {
@@ -32,7 +34,8 @@ public class PageAdapter extends PagedListAdapter<Item, PageAdapter.ViewHolder> 
 
         @Override
         public boolean areContentsTheSame(@NonNull Item oldItem, @NonNull Item newItem) {
-            return false;
+            return oldItem.getOwner().getProfile_image().equals(newItem.getOwner().getProfile_image())
+                    && oldItem.getOwner().getDisplay_name().equals(newItem.getOwner().getDisplay_name());
         }
     };
 
@@ -45,6 +48,11 @@ public class PageAdapter extends PagedListAdapter<Item, PageAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Item currentItem = getItem(position);
+        if(currentItem != null){
+            holder.textview.setText(currentItem.getOwner().getDisplay_name());
+            Glide.with(context).load(currentItem.getOwner().getProfile_image()).into(holder.imageview);
+        }
 
     }
 
