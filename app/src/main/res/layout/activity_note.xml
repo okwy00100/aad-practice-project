@@ -10,7 +10,7 @@ tools:context=".AndroidArchitecture.Views.NoteActivity">
     android:id="@+id/noteRecycler"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:listitem="@layout/note_list_item" />
+    tools:listitem="@layout/item_note_list" />
 
 <com.google.android.material.floatingactionbutton.FloatingActionButton
     android:id="@+id/button_add_note"
