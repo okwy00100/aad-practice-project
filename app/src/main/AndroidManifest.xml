@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CustomViews.CustomViewActivity"></activity>
+        <activity android:name=".PagingWithRetrofit.PagingActivity"/>
+        <activity android:name=".CustomViews.CustomViewActivity" />
         <activity android:name=".AndroidArchitecture.Views.AddEditNoteActivity" />
         <activity android:name=".AndroidArchitecture.Views.NoteActivity" />
         <activity android:name=".VolleyPicasso.VolleyActivity" />
