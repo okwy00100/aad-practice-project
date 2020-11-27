@@ -43,7 +43,7 @@ public class ItemAdapter extends PagedListAdapter<Item, ItemAdapter.ViewHolder> 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.paging_list_item, parent, false));
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_paging_list, parent, false));
     }
 
     @Override

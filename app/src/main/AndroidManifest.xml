@@ -19,7 +19,8 @@
         <activity android:name=".VolleyPicasso.VolleyActivity" />
         <activity android:name=".BroadcastReceiver.BroadcastReceiverActivity" />
         <activity android:name=".Services.ServiceActivity" />
-        <activity android:name=".CoordinatorLayout.CoordinatorLayoutActivity" />
+        <activity android:name=".CoordinatorLayout.CoordinatorLayoutActivity"
+            android:theme="@style/FullScreen"/>
         <activity android:name=".WorkManager.WorkManagerActivity" />
         <activity android:name=".MenusWithPickers.MenusWithPickersActivity" />
         <activity
@@ -31,7 +32,8 @@
                 android:value=".AppSettings.AppSettingsActivity" />
         </activity>
         <activity android:name=".AppSettings.AppSettingsActivity" />
-        <activity android:name=".TabNavigation.TabNavigationActivity" />
+        <activity android:name=".TabNavigation.TabNavigationActivity"
+            android:theme="@style/FullScreen"/>
         <activity android:name=".DrawablesStylesThemes.ScoreKeeperActivity" />
         <activity
             android:name=".IntentsWithActivities.SecondIntentActivity"

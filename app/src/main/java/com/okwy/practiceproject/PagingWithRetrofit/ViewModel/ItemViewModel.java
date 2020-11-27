@@ -33,15 +33,15 @@ public class ItemViewModel extends ViewModel {
         return itemPagedList;
     }
 
-    public void setItemPagedList(LiveData<PagedList<Item>> itemPagedList) {
-        this.itemPagedList = itemPagedList;
-    }
-
-    public LiveData<PageKeyedDataSource<Integer, Item>> getItemLiveDataSource() {
-        return itemLiveDataSource;
-    }
-
-    public void setItemLiveDataSource(LiveData<PageKeyedDataSource<Integer, Item>> itemLiveDataSource) {
-        this.itemLiveDataSource = itemLiveDataSource;
-    }
+//    public void setItemPagedList(LiveData<PagedList<Item>> itemPagedList) {
+//        this.itemPagedList = itemPagedList;
+//    }
+//
+//    public LiveData<PageKeyedDataSource<Integer, Item>> getItemLiveDataSource() {
+//        return itemLiveDataSource;
+//    }
+//
+//    public void setItemLiveDataSource(LiveData<PageKeyedDataSource<Integer, Item>> itemLiveDataSource) {
+//        this.itemLiveDataSource = itemLiveDataSource;
+//    }
 }

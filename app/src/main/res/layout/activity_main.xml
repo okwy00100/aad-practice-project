@@ -46,5 +46,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:listitem="@layout/main_list_item" />
+        tools:listitem="@layout/item_main_list" />
 </androidx.constraintlayout.widget.ConstraintLayout>
