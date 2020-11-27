@@ -1,13 +1,13 @@
 package com.okwy.practiceproject.PagingWithRetrofit.Model;
 
 public class Owner {
-    public int reputation;
-    public long user_id;
-    public String user_type;
-    public int accept_rate;
-    public String profile_image;
-    public String display_name;
-    public String link;
+    private int reputation;
+    private long user_id;
+    private String user_type;
+    private int accept_rate;
+    private String profile_image;
+    private String display_name;
+    private String link;
 
     public long getUser_id() {
         return user_id;

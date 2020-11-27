@@ -1,14 +1,17 @@
 package com.okwy.practiceproject.PagingWithRetrofit.Model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class Answers {
 
-    private List<Item> items;
-    private boolean has_more;
-    private int backoff;
-    private int quota_max;
-    private int quota_remaining;
+    public List<Item> items;
+    @SerializedName("has_more")
+    public boolean has_more;// = false;
+    public int backoff;
+    public int quota_max;
+    public int quota_remaining;
 
     public List<Item> getItems() {
         return items;
