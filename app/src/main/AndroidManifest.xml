@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NavigationComponent.NavigationComponentActivity"/>
+        <activity android:name=".ReactiveProgramming.RxJavaActivity"></activity>
+        <activity android:name=".NavigationComponent.NavigationComponentActivity" />
         <activity android:name=".AppSettings.AppSettingsActivity" />
         <activity android:name=".BottomNavigation.BottomNavigationActivity" />
         <activity android:name=".PagingWithRetrofit.PagingActivity" />
@@ -30,20 +31,18 @@
         <activity android:name=".Localization.LocaleActivity" />
         <activity android:name=".Snackbar.SnackbarActivity" />
         <activity android:name=".Toast.ToastActivity" />
-
         <activity
             android:name=".Notification.NotificationActivity"
             android:launchMode="singleTop" />
-
-        <activity android:name=".NavigationDrawer.NavigationDrawerActivity"
-            android:theme="@style/AppTheme.FullScreen"/>
+        <activity
+            android:name=".NavigationDrawer.NavigationDrawerActivity"
+            android:theme="@style/AppTheme.FullScreen" />
         <activity
             android:name=".TabNavigation.TabNavigationActivity"
             android:theme="@style/AppTheme.FullScreen" />
         <activity
             android:name=".CoordinatorLayout.CoordinatorLayoutActivity"
             android:theme="@style/AppTheme.FullScreen" />
-
         <activity
             android:name=".AppSettings.SettingsActivity"
             android:label="Settings"
@@ -60,8 +59,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".IntentsWithActivities.IntentActivity" />
         </activity>
-
-
         <activity android:name=".Main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

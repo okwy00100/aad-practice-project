@@ -38,18 +38,21 @@ public class MyView extends View {
     }
 
     private void init(AttributeSet attrs, int defStyleAttr) {
-        paint.setColor(Color.RED);
-        paint.setAntiAlias(true);
-        paint.setStyle(Paint.Style.STROKE);
+
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        //canvas.drawLine(0, 0, getWidth(), getHeight(), paint);
-        canvas.drawPath(path, paint);
+        drawCircle(canvas);
+
+        drawRectangle(10, 10, 200, 200, canvas);
+
+        initDoodle(canvas);
+
     }
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -58,10 +61,10 @@ public class MyView extends View {
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                path.moveTo(x,y);
+                path.moveTo(x, y);
                 break;
             case MotionEvent.ACTION_MOVE:
-                path.lineTo(x,y);
+                path.lineTo(x, y);
                 break;
             case MotionEvent.ACTION_UP:
                 break;
@@ -69,5 +72,27 @@ public class MyView extends View {
 
         invalidate();
         return true;
+    }
+
+
+    private void drawRectangle(float top, float left, float right, float bottom, Canvas canvas) {
+        paint.setColor(Color.BLUE);
+        paint.setStyle(Paint.Style.FILL_AND_STROKE);
+        canvas.drawRect(left, top, right, bottom, paint);
+    }
+
+    private void drawCircle(Canvas canvas) {
+        paint.setColor(Color.GREEN);
+        paint.setStyle(Paint.Style.FILL_AND_STROKE);
+        canvas.drawCircle(getWidth() - 100, getHeight() - 100, 100f, paint);
+
+    }
+
+    private void initDoodle(Canvas canvas){
+        paint.setColor(Color.RED);
+        paint.setAntiAlias(true);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(100f);
+        canvas.drawPath(path, paint);
     }
 }
