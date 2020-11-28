@@ -8,16 +8,21 @@
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
     </style>
 
-    <style name="FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="windowNoTitle">true</item>
+    <style name="AppTheme.FullScreen" >
         <item name="windowActionBar">false</item>
-        <item name="android:windowFullscreen">false</item>
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="windowNoTitle">true</item>
     </style>
+
+<!--    <style name="FullScreen" parent="Theme.AppCompat.Light.NoActionBar">-->
+<!--        <item name="windowNoTitle">true</item>-->
+<!--        <item name="windowActionBar">false</item>-->
+<!--        <item name="android:windowFullscreen">false</item>-->
+<!--        <item name="android:windowContentOverlay">@null</item>-->
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+<!--        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>-->
+<!--    </style>-->
 
 
 

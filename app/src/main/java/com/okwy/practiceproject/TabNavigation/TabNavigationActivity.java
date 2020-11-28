@@ -28,6 +28,20 @@ public class TabNavigationActivity extends AppCompatActivity {
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
+//
+//        //get views
+//        TabLayout tabLayout = findViewById(R.id.tabLayout);
+//        ViewPager viewPager = findViewById(R.id.viewPager);
+//
+//        TabLayoutAdapter tabLayoutAdapter = new TabLayoutAdapter(getSupportFragmentManager(), this);
+//        //add fragments to tabLayout
+//        tabLayoutAdapter.addFragment(new current_transaction(), getString(R.string.current_transactions));
+//        tabLayoutAdapter.addFragment(new history_fragment(), getString(R.string.history));
+//
+//        viewPager.setAdapter(tabLayoutAdapter);
+//        tabLayout.setupWithViewPager(viewPager);
+//        backView.setOnClickListener(this);
+
 
         final ViewPager pager = findViewById(R.id.pager);
         final PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());

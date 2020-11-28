@@ -1,5 +1,7 @@
 package com.okwy.practiceproject.TabNavigation.Adapter;
 
+import android.content.Context;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -8,6 +10,9 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import com.okwy.practiceproject.TabNavigation.Fragments.FirstTabFragment;
 import com.okwy.practiceproject.TabNavigation.Fragments.SecondTabFragment;
 import com.okwy.practiceproject.TabNavigation.Fragments.ThirdTabFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PagerAdapter extends FragmentStatePagerAdapter {
 
@@ -38,3 +43,48 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
         return numOfTabs;
     }
 }
+
+
+
+
+
+//public class TabLayoutAdapter extends FragmentStatePagerAdapter {
+//
+//    private final List<Fragment> mFragmentList = new ArrayList<>();
+//    private final List<String> mFragmentTitleList = new ArrayList<>();
+//    private Context context;
+//
+//    public TabLayoutAdapter(FragmentManager fm) {
+//        super(fm);
+//    }
+//
+//
+//    public TabLayoutAdapter(FragmentManager manager, Context mContext) {
+//        super(manager);
+//        this.context = mContext;
+//    }
+//
+//    @Override
+//    public Fragment getItem(int position) {
+//        return mFragmentList.get(position);
+//    }
+//
+//    public void addFragment(Fragment fragment, String title) {
+//        mFragmentList.add(fragment);
+//        mFragmentTitleList.add(title);
+//    }
+//
+//
+//    @Override
+//    public int getCount() {
+//        return mFragmentList.size();
+//    }
+//
+//    @Nullable
+//    @Override
+//    public CharSequence getPageTitle(int position) {
+//        return mFragmentTitleList.get(position);
+//    }
+//
+//
+//}
