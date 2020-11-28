@@ -4,4 +4,6 @@
     <string name="welcome">Bienvenue</string>
     <string name="minus_button">Minus Button</string>
     <string name="plus_button">Plus Button</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
 </resources>

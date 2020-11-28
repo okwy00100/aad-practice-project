@@ -12,8 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NavigationComponent.NavigationComponentActivity"></activity>
-        <activity android:name=".NavigationDrawer.NavigationDrawerActivity" />
+        <activity android:name=".NavigationComponent.NavigationComponentActivity"/>
+        <activity android:name=".AppSettings.AppSettingsActivity" />
         <activity android:name=".BottomNavigation.BottomNavigationActivity" />
         <activity android:name=".PagingWithRetrofit.PagingActivity" />
         <activity android:name=".CustomViews.CustomViewActivity" />
@@ -22,11 +22,28 @@
         <activity android:name=".VolleyPicasso.VolleyActivity" />
         <activity android:name=".BroadcastReceiver.BroadcastReceiverActivity" />
         <activity android:name=".Services.ServiceActivity" />
-        <activity
-            android:name=".CoordinatorLayout.CoordinatorLayoutActivity"
-            android:theme="@style/FullScreen" />
         <activity android:name=".WorkManager.WorkManagerActivity" />
         <activity android:name=".MenusWithPickers.MenusWithPickersActivity" />
+        <activity android:name=".DrawablesStylesThemes.ScoreKeeperActivity" />
+        <activity android:name=".IntentsWithActivities.IntentActivity" />
+        <activity android:name=".JobScheduler.JobSchedulerActivity" />
+        <activity android:name=".Localization.LocaleActivity" />
+        <activity android:name=".Snackbar.SnackbarActivity" />
+        <activity android:name=".Toast.ToastActivity" />
+
+        <activity
+            android:name=".Notification.NotificationActivity"
+            android:launchMode="singleTop" />
+
+        <activity android:name=".NavigationDrawer.NavigationDrawerActivity"
+            android:theme="@style/AppTheme.FullScreen"/>
+        <activity
+            android:name=".TabNavigation.TabNavigationActivity"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".CoordinatorLayout.CoordinatorLayoutActivity"
+            android:theme="@style/AppTheme.FullScreen" />
+
         <activity
             android:name=".AppSettings.SettingsActivity"
             android:label="Settings"
@@ -35,11 +52,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".AppSettings.AppSettingsActivity" />
         </activity>
-        <activity android:name=".AppSettings.AppSettingsActivity" />
-        <activity
-            android:name=".TabNavigation.TabNavigationActivity"
-            android:theme="@style/FullScreen" />
-        <activity android:name=".DrawablesStylesThemes.ScoreKeeperActivity" />
         <activity
             android:name=".IntentsWithActivities.SecondIntentActivity"
             android:label="Second Intent Activity"
@@ -48,14 +60,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".IntentsWithActivities.IntentActivity" />
         </activity>
-        <activity android:name=".IntentsWithActivities.IntentActivity" />
-        <activity android:name=".JobScheduler.JobSchedulerActivity" />
-        <activity
-            android:name=".Notification.NotificationActivity"
-            android:launchMode="singleTop" />
-        <activity android:name=".Localization.LocaleActivity" />
-        <activity android:name=".Snackbar.SnackbarActivity" />
-        <activity android:name=".Toast.ToastActivity" />
+
+
         <activity android:name=".Main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
