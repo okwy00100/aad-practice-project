@@ -45,15 +45,12 @@ public class MyView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-
         drawCircle(canvas);
 
         drawRectangle(10, 10, 200, 200, canvas);
-        //canvas.drawLine(0, 0, getWidth(), getHeight(), paint);
-        paint.setColor(Color.RED);
-        paint.setAntiAlias(true);
-        paint.setStyle(Paint.Style.STROKE);
-        canvas.drawPath(path, paint);
+
+        initDoodle(canvas);
+
     }
 
 
@@ -89,5 +86,13 @@ public class MyView extends View {
         paint.setStyle(Paint.Style.FILL_AND_STROKE);
         canvas.drawCircle(getWidth() - 100, getHeight() - 100, 100f, paint);
 
+    }
+
+    private void initDoodle(Canvas canvas){
+        paint.setColor(Color.RED);
+        paint.setAntiAlias(true);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(100f);
+        canvas.drawPath(path, paint);
     }
 }
