@@ -5,9 +5,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    public static final String BASE_URL = "https://api.stackexchange.com/2.2/";
+    private static final String BASE_URL = "https://api.stackexchange.com/2.2/";
     private static RetrofitClient instance;
-    private Retrofit retrofit;
+    private final Retrofit retrofit;
 
     private RetrofitClient() {
         retrofit = new Retrofit.Builder()

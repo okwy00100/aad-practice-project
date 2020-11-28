@@ -24,6 +24,7 @@ import com.okwy.practiceproject.NavigationDrawer.NavigationDrawerActivity;
 import com.okwy.practiceproject.Notification.NotificationActivity;
 import com.okwy.practiceproject.PagingWithRetrofit.PagingActivity;
 import com.okwy.practiceproject.R;
+import com.okwy.practiceproject.ReactiveProgramming.RxJavaActivity;
 import com.okwy.practiceproject.Services.ServiceActivity;
 import com.okwy.practiceproject.Snackbar.SnackbarActivity;
 import com.okwy.practiceproject.TabNavigation.TabNavigationActivity;
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
         conceptList.add("Navigation Drawer");
         conceptList.add("Navigation Component");
         conceptList.add("Menus And Pickers");
+        conceptList.add("Reactive Programming");
         conceptList.add("Paging with Retrofit");
         conceptList.add("Volley with Picasso");
         conceptList.add("Coordinator Layout");
@@ -103,6 +105,9 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
             case "JobScheduler":
                 startActivity(new Intent(this, JobSchedulerActivity.class));
                 break;
+            case "Reactive Programming":
+                startActivity(new Intent(this, RxJavaActivity.class));
+                break;
             case "Paging with Retrofit":
                 startActivity(new Intent(this, PagingActivity.class));
                 break;
@@ -124,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements MainAdapter.ListI
             case "Menus And Pickers":
                 startActivity(new Intent(this, MenusWithPickersActivity.class));
                 break;
-            case "Volley With Picasso":
+            case "Volley with Picasso":
                 startActivity(new Intent(this, VolleyActivity.class));
                 break;
             case "Foreground Service":
