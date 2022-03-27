@@ -25,7 +25,5 @@ public class ItemDataSourceFactory extends DataSource.Factory {
         return itemLiveDataSource;
     }
 
-    public void setItemLiveDataSource(MutableLiveData<PageKeyedDataSource<Integer, Item>> itemLiveDataSource) {
-        this.itemLiveDataSource = itemLiveDataSource;
-    }
+
 }

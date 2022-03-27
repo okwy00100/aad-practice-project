@@ -78,12 +78,14 @@ public class MyView extends View {
     private void drawRectangle(float top, float left, float right, float bottom, Canvas canvas) {
         paint.setColor(Color.BLUE);
         paint.setStyle(Paint.Style.FILL_AND_STROKE);
+        paint.setStrokeWidth(0f);
         canvas.drawRect(left, top, right, bottom, paint);
     }
 
     private void drawCircle(Canvas canvas) {
         paint.setColor(Color.GREEN);
         paint.setStyle(Paint.Style.FILL_AND_STROKE);
+        paint.setStrokeWidth(0f);
         canvas.drawCircle(getWidth() - 100, getHeight() - 100, 100f, paint);
 
     }
@@ -92,7 +94,7 @@ public class MyView extends View {
         paint.setColor(Color.RED);
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(100f);
+        paint.setStrokeWidth(30f);
         canvas.drawPath(path, paint);
     }
 }
